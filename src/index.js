@@ -1,20 +1,20 @@
-import projectLoad from "./project-load";
-import createTodo from "./todo";
-import {displayForm, addItemToChecklist, clearForm} from "./page-contents";
+import { createToDo } from './create-to-do.js';
+import { displayTheForm, addItemToCheckList, clearForm, displayToDo } from './dom-manip.js'
 
-projectLoad();
+displayToDo();
 
-let eventListeners = (() => {
-    const addNewTodo = document.querySelector(".add-todo-btn");
-    addNewTodo.addEventListener("click", displayForm);
+let clickEventsModule = (function() {
+
+    const addNewToDo = document.querySelector(".add-todo-button");
+    addNewToDo.addEventListener("click", displayTheForm);
 
     const addToChecklist = document.querySelector(".add-to-checklist");
-    addToChecklist.addEventListener("click", addItemToChecklist);
+    addToChecklist.addEventListener("click", addItemToCheckList);
 
-    const clearBtn = document.querySelector(".reset-btn");
+    const clearBtn = document.querySelector(".reset-button");
     clearBtn.addEventListener("click", clearForm);
+
+    const submitBtn = document.querySelector(".submit-button");
+    submitBtn.addEventListener("click", createToDo);
+    
 })();
-
-const myTodo = createTodo('Buy Groceries',"Go get the groceries needed at the home","15/05/2023","Low","Fruits, Milk and Nuts");
-console.log(myTodo);
-

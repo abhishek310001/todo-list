@@ -1,0 +1,170 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+.content {
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: .1fr;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.projects .card {
+    background-color: #ecda68;
+    color: black;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-heading {
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.form {
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.todos-heading {
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.projects {
+    background-color: #bccbde;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column: 2 / 3;
+    gap: 15px;
+    padding: 15px;
+}
+
+.add-todo-button {
+    margin-top: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#add-todo {
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    gap: 10px;
+    margin: 50px 50px 25px 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0px;
+}
+
+p > ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    
+    list-style-type: none;
+    margin: 5px;
+}
+
+.remove-checklist-item {
+    justify-self: right;
+    cursor: pointer;
+} 
+
+#add-to-checklist {
+    margin-bottom: 20px;
+}
+
+.submit-button, .reset-button {
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.add-to-checklist {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.reset-button {
+    margin-left: 20px;
+}
+
+.check-list-label {
+    text-align: left;
+    padding-top: 50px;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.display-li {
+    cursor: pointer;
+}
+
+.remove-todo-button {
+    grid-row: 5 / 6;
+    font-weight: 900;
+    background-color: red;
+    border-radius: 10px;
+    align-self: center;
+    width: 20vw;
+    padding: 10px 5px;
+}
+
+button{
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input{
+    padding: 5px 5px 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+input:focus{
+    outline: none;
+    border: solid rgb(51, 218, 22) 2px;
+    box-shadow: 1px 1px 2px 2px #000000ab;
+}
+
+label{
+    font-size: 20px;
+}
+
+p{
+    font-size: 22px;
+    font-weight: 800;
+}
+
+select{
+    font-size: 18px;
+    padding: 5px 5px 5px 10px;
+}
